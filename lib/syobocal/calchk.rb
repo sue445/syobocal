@@ -24,8 +24,8 @@ module Syobocal
         result << {
           :pid => item.attribute("PID").to_s.to_i,
           :tid => item.attribute("TID").to_s.to_i,
-          :st_time => Time.parse(item.attribute("StTime").to_s),
-          :ed_time => Time.parse(item.attribute("EdTime").to_s),
+          :st_time => Time.zone.parse(item.attribute("StTime").to_s),
+          :ed_time => Time.zone.parse(item.attribute("EdTime").to_s),
           :ch_name => item.attribute("ChName").to_s,
           :ch_id => item.attribute("ChID").to_s.to_i,
           :count => item.attribute("Count").to_s.to_i,
