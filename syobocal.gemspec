@@ -11,4 +11,6 @@ Gem::Specification.new do |s|
   s.license = 'MIT'
   s.executables << 'syobocal-anime'
   s.executables << 'syobocal'
+
+  s.add_dependency "activesupport"
 end
